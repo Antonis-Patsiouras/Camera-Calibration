@@ -16,13 +16,13 @@ while True:
         # Λήψη εικόνας 1
         cap = cv2.VideoCapture(0)
         ret, frame = cap.read()
-        cv2.imwrite(r"C:\Users\apats\OneDrive\Documents\MSc Robotics\P201_1\Project2\images\image1.jpg", frame)
+        cv2.imwrite(r"your_image_path", frame)
         print("Image 1 captured")
     if cv2.waitKey(1) & 0xFF == ord('t'):
         # Λήψη εικόνας 2
         cap = cv2.VideoCapture(0)
         ret, frame = cap.read()
-        cv2.imwrite(r"C:\Users\apats\OneDrive\Documents\MSc Robotics\P201_1\Project2\images\image2.jpg", frame)
+        cv2.imwrite(r"your_image_path", frame)
         print("Image 2 captured")
         break
     if not ret:
