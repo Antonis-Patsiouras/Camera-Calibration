@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 # Loading of 2 images
-img1 = cv2.imread(r"C:\Users\apats\OneDrive\Documents\MSc Robotics\P201_1\Project2\images\image1.jpg", cv2.IMREAD_GRAYSCALE)
-img2 = cv2.imread(r"C:\Users\apats\OneDrive\Documents\MSc Robotics\P201_1\Project2\images\image2.jpg", cv2.IMREAD_GRAYSCALE)
+img1 = cv2.imread(r"your_image_path", cv2.IMREAD_GRAYSCALE)
+img2 = cv2.imread(r"your_image_path", cv2.IMREAD_GRAYSCALE)
 
 # Εξαγωγή χαρακτηριστικών σημείων με τη μέθοδο SIFT
 sift = cv2.SIFT_create()
@@ -29,8 +29,8 @@ fundamental_matrix, mask = cv2.findFundamentalMat(pts1, pts2, cv2.FM_RANSAC)
 
 # Υπολογισμός του Ουσιώδους Πίνακα με χρήση RANSAC
 # Φόρτωση των εσωτερικών παράμετρων της κάμερας 
-camera_matrix = np.load(r"C:\Users\apats\OneDrive\Documents\MSc Robotics\P201_1\Project2\camera\mtx.npy")
-dist_coeffs = np.load(r"C:\Users\apats\OneDrive\Documents\MSc Robotics\P201_1\Project2\camera\dist.npy")
+camera_matrix = np.load(r"your_path")
+dist_coeffs = np.load(r"your_path")
 
 essential_matrix, mask = cv2.findEssentialMat(pts1, pts2, cameraMatrix=camera_matrix, method=cv2.RANSAC, prob=0.999, threshold=1.0)
 
